@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                xmlns:th="http://www.thymeleaf.org">
+<!--Adding thymeleaf layout-->
+<head>
+    <meta charset="UTF-8">
+    <title>Web</title>
+        <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<body>
+<!--Render Navbar-->
+
+<div th:replace="~{fragments/Navbar}"></div>
+
+<div class="container" layout:fragment="subLayout">
+<!--     Sub layout content will be rendered here-->
+
+</div>
+
+<!--Render Footer-->
+<div th:replace="~{fragments/Footer}"></div>
+
+<script th:src="@{/resources/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+</html>

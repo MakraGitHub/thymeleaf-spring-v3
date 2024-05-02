@@ -1,0 +1,32 @@
+<div>
+<!--  Card Image -->
+  <div th:fragment="cardImg(thumbnail,title, description, id)" class="card">
+      <img th:src="@{/resources/img/thumbnail.jpg}" class="card-img-top" alt="Thumbnail">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+<!--  Card Title-->
+  <div th:fragment="cardDefault(title, description, id)" class="card">
+    <div class="card-body">
+      <h5 th:text="${title}" class="card-title"></h5>
+      <p  th:text="${description}" class="card-text"></p>
+      <a th:href="@{/article/{id}/{title}(id=${id},title=${title})}" class="btn btn-primary">Button</a>
+    </div>
+  </div>
+
+<!--  Card link-->
+  <div th:fragment="cardLink(title,description, link1, link2)" class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+
+</div>

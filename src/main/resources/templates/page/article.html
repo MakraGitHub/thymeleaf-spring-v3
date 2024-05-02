@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/webLayout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+
+</head>
+<body>
+
+<div class="container" layout:fragment="subLayout">
+    <h1>Latest Articles</h1>
+    <hr>
+    <div class="row">
+
+        <div class="col-3 col-md-3">
+            <div th:replace="~{fragments/card.html :: cardDefault('Spring','Spring boot',10)}"></div>
+        </div>
+
+        <div class="col-3 col-md-3">
+            <div th:replace="~{fragments/card.html :: cardDefault('Spring','Spring boot',20)}"></div>
+        </div>
+
+        <div class="col-3 col-md-3">
+            <div th:replace="~{fragments/card.html :: cardDefault('Spring','Spring boot',30)}"></div>
+        </div>
+
+        <div class="col-3 col-md-3">
+            <div th:replace="~{fragments/card.html :: cardDefault('Spring','Spring boot',40)}"></div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                layout:decorate="~{layouts/webLayout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+</head>
+<body>
+<div class="container" layout:fragment="subLayout">
+     <div>Welcome to home page</div>
+     <div th:replace="~{fragments/headline::headline(app)}"></div>
+
+</div>
+</body>
+</html>
